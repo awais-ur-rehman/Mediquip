@@ -1,0 +1,603 @@
+{
+  "products": [
+    {
+      "id": "hf3100",
+      "name": "HF3100 - I.C.U Bed Electric, 5 Function Column Model - With Weighing Scale",
+      "shortName": "ICU Bed Electric 5 Function",
+      "brand": "Hanumant Surgicals",
+      "brandId": "hanumant",
+      "category": "Device",
+      "subcategory": "Hospital Furniture",
+      "type": "With Mattress & Without Mattress",
+      "productId": "TTHF062",
+      "price": 22227,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "Size 1900mm*900mm*600mm",
+        "Framework of rectangular m.s. tubes",
+        "Backrest positions by screw handle from the foot end",
+        "S.S. head & foot bows with laminated panels.",
+        "Provision of Telescopic I.V. Rod with 4 locations.",
+        "Mounted on PVC stumps."
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer. Please note that our Shipping Services (Fee, Transportation, Loss or Damage of any shipment, etc.) are in accordance with the Seller's terms of Shipment.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": true,
+      "isNew": true
+    },
+    {
+      "id": "anesthesia-bed",
+      "name": "Anesthesia Medical Equipment Bed Electric, 5 Function Column Model - With Weighing Scale",
+      "shortName": "Anesthesia Medical Equipment Bed",
+      "brand": "Contec",
+      "brandId": "contec",
+      "category": "Device",
+      "subcategory": "Anesthesia Machine",
+      "type": "Standard",
+      "productId": "TTAE001",
+      "price": 17383,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "High precision anesthesia delivery",
+        "Built-in vaporizer",
+        "Electronic flow meters",
+        "Integrated patient monitoring",
+        "Low flow anesthesia capability"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": true,
+      "isNew": false
+    },
+    {
+      "id": "angio-system",
+      "name": "Angio System Bed Electric, 5 Function Column Model - With Weighing Scale",
+      "shortName": "Angio System Bed Electric",
+      "brand": "Aqua",
+      "brandId": "aqua",
+      "category": "Device",
+      "subcategory": "ECG Machine",
+      "type": "Standard",
+      "productId": "TTAS002",
+      "price": 29425,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "High resolution fluoroscopy",
+        "Digital subtraction angiography",
+        "Flat panel detector",
+        "Low radiation dose technology",
+        "Advanced image processing"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": false,
+      "isNew": true
+    },
+    {
+      "id": "digital-thermometer",
+      "name": "Digital Medical thermometer, 5 Function Column Model - With Weighing Scale",
+      "shortName": "Digital Medical Thermometer",
+      "brand": "Akas",
+      "brandId": "akas",
+      "category": "Accessories",
+      "subcategory": "ECG Monitor Cable",
+      "type": "Digital",
+      "productId": "TTDT003",
+      "price": 2432,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "Fast 10-second reading",
+        "Memory recall for last 10 readings",
+        "Beep alert when complete",
+        "Auto shut-off",
+        "Waterproof tip"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": false,
+      "isNew": false
+    },
+    {
+      "id": "c-arm",
+      "name": "C-Arm I.C.U Bed Electric, 5 Function Column Model - With Weighing Scale",
+      "shortName": "C-Arm Medical System",
+      "brand": "Beyond",
+      "brandId": "beyond",
+      "category": "Device",
+      "subcategory": "ECG Machine",
+      "type": "Mobile C-Arm",
+      "productId": "TTCA004",
+      "price": 12253,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "High-frequency X-ray generator",
+        "9-inch image intensifier",
+        "Digital image processing",
+        "360° C-arm rotation",
+        "Mobile base with locking wheels"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": true,
+      "isNew": false
+    },
+    {
+      "id": "cyberknife",
+      "name": "Cyberknife Treatment System, 5 Function Column Model - With Weighing Scale",
+      "shortName": "Cyberknife Treatment System",
+      "brand": "Contec",
+      "brandId": "contec",
+      "category": "Device",
+      "subcategory": "Head Lamp",
+      "type": "Radiosurgery",
+      "productId": "TTCK005",
+      "price": 45234,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "Real-time tumor tracking",
+        "Sub-millimeter accuracy",
+        "Non-invasive treatment",
+        "Full-body radiosurgery",
+        "Synchrony respiratory tracking"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": true,
+      "isNew": true
+    },
+    {
+      "id": "ecg-monitor-cable",
+      "name": "ECG Monitor Cable - 10-Lead Standard Patient Cable",
+      "shortName": "ECG Monitor Cable 10-Lead",
+      "brand": "Akas",
+      "brandId": "akas",
+      "category": "Accessories",
+      "subcategory": "ECG Monitor Cable",
+      "type": "10-Lead",
+      "productId": "TTEC006",
+      "price": 1299,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "10-lead configuration",
+        "Shielded cable to reduce interference",
+        "Gold-plated connectors",
+        "2.5m length",
+        "Compatible with major ECG brands"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": false,
+      "isNew": false
+    },
+    {
+      "id": "ecg-paper",
+      "name": "ECG Thermal Recording Paper - 80mm x 20m Roll",
+      "shortName": "ECG Recording Paper Roll",
+      "brand": "Aqua",
+      "brandId": "aqua",
+      "category": "Accessories",
+      "subcategory": "ECG Paper",
+      "type": "Thermal",
+      "productId": "TTEP007",
+      "price": 450,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "High sensitivity thermal paper",
+        "1mm grid lines",
+        "80mm width x 20m length",
+        "Pack of 10 rolls",
+        "Compatible with most ECG machines"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": false,
+      "isNew": false
+    },
+    {
+      "id": "holter-ecg",
+      "name": "Holter ECG System - 12-Lead Ambulatory Monitor",
+      "shortName": "Holter ECG 12-Lead Monitor",
+      "brand": "Contec",
+      "brandId": "contec",
+      "category": "Accessories",
+      "subcategory": "Holter ECG System",
+      "type": "Ambulatory",
+      "productId": "TTHE008",
+      "price": 18500,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "12-lead ECG recording",
+        "7-day recording capability",
+        "Built-in event marker",
+        "Software analysis included",
+        "Lightweight 85g recorder"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": false,
+      "isNew": true
+    },
+    {
+      "id": "nebuliser",
+      "name": "Compressor Nebuliser for Home & Hospital Use",
+      "shortName": "Compressor Nebuliser",
+      "brand": "Beyond",
+      "brandId": "beyond",
+      "category": "Device",
+      "subcategory": "Nebuliser",
+      "type": "Compressor",
+      "productId": "TTNB009",
+      "price": 3200,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "Piston compressor technology",
+        "Particle size 0.5-5 microns",
+        "Medication cup capacity 6ml",
+        "Low noise operation",
+        "Complete nebulizer kit included"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": false,
+      "isNew": false
+    },
+    {
+      "id": "single-channel-ecg",
+      "name": "Single Channel ECG Machine with Thermal Printer",
+      "shortName": "Single Channel ECG Machine",
+      "brand": "Contec",
+      "brandId": "contec",
+      "category": "ECG Channel",
+      "subcategory": "Single Channel",
+      "type": "Single Channel",
+      "productId": "TTSC010",
+      "price": 8750,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "12-lead ECG acquisition",
+        "Integrated thermal printer",
+        "Large LCD display",
+        "Auto-measurement & interpretation",
+        "USB data transfer"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": true,
+      "isNew": false
+    },
+    {
+      "id": "six-channel-ecg",
+      "name": "Six Channel ECG Machine with Automated Interpretation",
+      "shortName": "Six Channel ECG Machine",
+      "brand": "Akas",
+      "brandId": "akas",
+      "category": "ECG Channel",
+      "subcategory": "Six Channel",
+      "type": "Six Channel",
+      "productId": "TTSIX011",
+      "price": 15900,
+      "availability": "In Stock",
+      "imageUrl": "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=600&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=600&h=400&fit=crop"
+      ],
+      "features": [
+        "6-channel simultaneous recording",
+        "12-lead ECG",
+        "Automated rhythm analysis",
+        "5.7 inch color display",
+        "Built-in rechargeable battery"
+      ],
+      "shippingPolicy": "Orders made at Lofty Mediquip are initiated and processed for shipment upon receipt of request from the customer.",
+      "refundPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "cancellationPolicy": "Please refer to Lofty Mediquip Return Policy.",
+      "isFeatured": false,
+      "isNew": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "accessories",
+      "name": "Accessories",
+      "subcategories": [
+        "ECG Monitor Cable",
+        "ECG Paper",
+        "endoscope",
+        "Holter ECG System"
+      ]
+    },
+    {
+      "id": "brands",
+      "name": "Brands",
+      "subcategories": ["Akas", "Aqua", "Beyond", "Contec"]
+    },
+    {
+      "id": "device",
+      "name": "Device",
+      "subcategories": [
+        "Anesthesia Machine",
+        "ECG Machine",
+        "Head Lamp",
+        "Nebuliser"
+      ]
+    },
+    {
+      "id": "ecg-channel",
+      "name": "ECG Channel",
+      "subcategories": [
+        "Portable",
+        "Single Channel",
+        "Six Channel",
+        "Three Channel"
+      ]
+    }
+  ],
+  "moreCategories": [
+    {
+      "id": "sleep-apnea",
+      "name": "Sleep Apnea",
+      "imageUrl": "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "veterinary",
+      "name": "Veterinary Medical Devices",
+      "imageUrl": "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "home-care",
+      "name": "Home Care",
+      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "hospital-equipment",
+      "name": "Hospital Equipment",
+      "imageUrl": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "ortho-care",
+      "name": "Ortho care",
+      "imageUrl": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "hearing-aids",
+      "name": "Hearing aids",
+      "imageUrl": "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "diagnostics",
+      "name": "Diagnostics",
+      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "hospital-furniture",
+      "name": "Hospital Furniture",
+      "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "endoscopy",
+      "name": "Endoscopy",
+      "imageUrl": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=200&h=200&fit=crop"
+    },
+    {
+      "id": "physiotherapy",
+      "name": "Physiotherapy",
+      "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"
+    }
+  ],
+  "brands": [
+    {
+      "id": "bmc",
+      "name": "BMC",
+      "imageUrl": "https://images.unsplash.com/photo-1583912267550-d974311a9a6e?w=200&h=80&fit=crop"
+    },
+    {
+      "id": "drive",
+      "name": "Drive DeVilbiss",
+      "imageUrl": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=200&h=80&fit=crop"
+    },
+    {
+      "id": "resmed",
+      "name": "ResMed",
+      "imageUrl": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=200&h=80&fit=crop"
+    },
+    {
+      "id": "hypnus",
+      "name": "Hypnus",
+      "imageUrl": "https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=200&h=80&fit=crop"
+    },
+    {
+      "id": "respro",
+      "name": "Respro",
+      "imageUrl": "https://images.unsplash.com/photo-1583912267550-d974311a9a6e?w=200&h=80&fit=crop"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "ecg-guide",
+      "title": "Complete Guide to ECG Machines for Hospitals",
+      "excerpt": "Understanding the different types of ECG machines available and how to choose the right one for your facility.",
+      "author": "Dr. Rajesh Kumar",
+      "date": "2024-01-15",
+      "category": "Equipment Guide",
+      "imageUrl": "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop",
+      "readTime": "5 min read"
+    },
+    {
+      "id": "hospital-beds",
+      "title": "Hospital Bed Types: ICU, Manual and Electric Beds Explained",
+      "excerpt": "A comprehensive comparison of different hospital bed types and their appropriate use cases in clinical settings.",
+      "author": "Medical Team",
+      "date": "2024-01-10",
+      "category": "Product Review",
+      "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&h=400&fit=crop",
+      "readTime": "7 min read"
+    },
+    {
+      "id": "nebuliser-guide",
+      "title": "How to Choose the Right Nebuliser for Your Patients",
+      "excerpt": "Key factors to consider when selecting nebulisers for respiratory therapy in clinical and home care settings.",
+      "author": "Pharmacy Team",
+      "date": "2024-01-05",
+      "category": "Clinical Tips",
+      "imageUrl": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600&h=400&fit=crop",
+      "readTime": "4 min read"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-1",
+      "question": "What types of medical equipment do you sell?",
+      "answer": "Lofty Mediquip offers a wide range of medical equipment including ECG machines, hospital beds, anesthesia machines, nebulisers, diagnostic devices, monitoring equipment, and accessories from leading brands.",
+      "category": "Products"
+    },
+    {
+      "id": "faq-2",
+      "question": "How can I place an order?",
+      "answer": "You can place an order directly through our website by adding items to your cart, or by using the 'Inquiry Now' button on the product page to get in touch with our sales team for bulk orders.",
+      "category": "Ordering"
+    },
+    {
+      "id": "faq-3",
+      "question": "What is your shipping policy?",
+      "answer": "Orders are initiated and processed for shipment upon receipt of request from the customer. Shipping fees and timelines depend on the product size, weight, and delivery location. We follow the seller's terms of shipment.",
+      "category": "Shipping"
+    },
+    {
+      "id": "faq-4",
+      "question": "Do you offer EMI options?",
+      "answer": "Yes, EMI options are available on select products. Please contact our sales team to know more about financing options available for your purchase.",
+      "category": "Payment"
+    },
+    {
+      "id": "faq-5",
+      "question": "Are all products authentic?",
+      "answer": "Yes, 100% of our products are authentic and sourced directly from certified manufacturers or authorized distributors. Each product undergoes quality checks before dispatch.",
+      "category": "Quality"
+    },
+    {
+      "id": "faq-6",
+      "question": "What is your return policy?",
+      "answer": "We follow a structured return policy. Products can be returned within 7 days of delivery if found defective or not matching the description. Please contact our support team to initiate a return request.",
+      "category": "Returns"
+    },
+    {
+      "id": "faq-7",
+      "question": "Do you provide after-sales service?",
+      "answer": "Yes, we provide after-sales support and can connect you with authorized service centers for the brands we carry. Contact our customer care team for service assistance.",
+      "category": "Support"
+    },
+    {
+      "id": "faq-8",
+      "question": "Can I track my order?",
+      "answer": "Yes, once your order is dispatched, you will receive a tracking number via email or SMS. You can use this to track your shipment on the courier's website.",
+      "category": "Shipping"
+    }
+  ],
+  "careers": [
+    {
+      "id": "sales-executive",
+      "title": "Sales Executive - Medical Equipment",
+      "department": "Sales",
+      "location": "Ahmedabad, Gujarat",
+      "type": "Full Time",
+      "experience": "2-4 years",
+      "description": "We are looking for an experienced Sales Executive to join our growing team. You will be responsible for building client relationships, achieving sales targets, and representing Lofty Mediquip in the market.",
+      "requirements": [
+        "2-4 years of experience in medical equipment sales",
+        "Strong communication and negotiation skills",
+        "Knowledge of hospital equipment and medical devices",
+        "Willingness to travel within the region",
+        "Bachelor's degree in any stream"
+      ]
+    },
+    {
+      "id": "customer-support",
+      "title": "Customer Support Specialist",
+      "department": "Support",
+      "location": "Ahmedabad, Gujarat",
+      "type": "Full Time",
+      "experience": "1-2 years",
+      "description": "Join our customer support team to provide excellent service to healthcare professionals. You will handle inquiries, process orders, and ensure customer satisfaction.",
+      "requirements": [
+        "1-2 years of customer service experience",
+        "Excellent verbal and written communication",
+        "Proficiency in MS Office and CRM tools",
+        "Problem-solving mindset",
+        "Graduate in any discipline"
+      ]
+    },
+    {
+      "id": "logistics-coordinator",
+      "title": "Logistics & Warehouse Coordinator",
+      "department": "Operations",
+      "location": "Ahmedabad, Gujarat",
+      "type": "Full Time",
+      "experience": "2-3 years",
+      "description": "Manage the day-to-day logistics operations including inventory management, order processing, and coordinating with shipping partners.",
+      "requirements": [
+        "2-3 years in logistics/warehouse management",
+        "Knowledge of inventory management systems",
+        "Attention to detail",
+        "Physical fitness for warehouse operations",
+        "12th pass or graduate"
+      ]
+    }
+  ]
+}
