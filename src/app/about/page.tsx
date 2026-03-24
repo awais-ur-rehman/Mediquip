@@ -1,6 +1,10 @@
-import Header from "@/components/layout/Header";
-import Menubar from "@/components/layout/Menubar";
-import Footer from "@/components/layout/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us - Lofty Mediquip",
+  description:
+    "Learn about Lofty Mediquip — India's trusted medical supply store committed to quality, safety, and performance.",
+};
 
 const values = [
   {
@@ -31,171 +35,163 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <Menubar />
-      <div className="gradient-divider" />
-
-      <main className="flex-1">
-        {/* Hero */}
-        <section
-          className="w-full py-16"
-          style={{ backgroundColor: "#ECF3FE" }}
-        >
-          <div className="max-w-[1440px] mx-auto px-[100px]">
-            <div className="max-w-[700px]">
-              <h1
-                className="text-[42px] font-bold leading-tight mb-6"
-                style={{ color: "#18315B" }}
-              >
-                About Lofty Mediquip
-              </h1>
-              <p
-                className="text-[16px] leading-relaxed mb-4"
-                style={{ color: "#555555" }}
-              >
-                Lofty Mediquip is India&apos;s trusted online medical supply
-                store, dedicated to providing hospitals, clinics, and healthcare
-                professionals with the highest-quality medical equipment at
-                competitive prices.
-              </p>
-              <p
-                className="text-[16px] leading-relaxed"
-                style={{ color: "#555555" }}
-              >
-                Founded with a mission to make advanced medical technology
-                accessible across India, we partner with leading global and
-                domestic brands to bring you a comprehensive range of hospital
-                equipment, diagnostic devices, surgical supplies, and more.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Core Values */}
-        <section className="w-full py-16">
-          <div className="max-w-[1440px] mx-auto px-[100px]">
-            <h2
-              className="text-[28px] font-bold text-center mb-12"
+    <>
+      {/* Hero */}
+      <section
+        className="w-full py-16"
+        style={{ backgroundColor: "#ECF3FE" }}
+      >
+        <div className="max-w-[1440px] mx-auto px-[100px]">
+          <div className="max-w-[700px]">
+            <h1
+              className="text-[42px] font-bold leading-tight mb-6"
               style={{ color: "#18315B" }}
             >
-              Our Core Values
-            </h2>
-
-            <div className="grid grid-cols-4 gap-8">
-              {values.map((value) => (
-                <div
-                  key={value.title}
-                  className="flex flex-col items-center text-center gap-4 p-6 rounded-[12px] border"
-                  style={{ borderColor: "#E5EAF2", backgroundColor: "#FFFFFF" }}
-                >
-                  <div
-                    className="w-16 h-16 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "#ECF3FE" }}
-                  >
-                    <ValueIcon name={value.icon} />
-                  </div>
-                  <h3
-                    className="text-[18px] font-bold"
-                    style={{ color: "#18315B" }}
-                  >
-                    {value.title}
-                  </h3>
-                  <p
-                    className="text-[13px] leading-relaxed"
-                    style={{ color: "#7D7D7D" }}
-                  >
-                    {value.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Quote Banner */}
-        <section
-          className="w-full py-14"
-          style={{ backgroundColor: "#3163B7" }}
-        >
-          <div className="max-w-[1440px] mx-auto px-[100px] text-center">
-            <blockquote
-              className="text-[24px] font-semibold italic mb-4"
-              style={{ color: "#FFFFFF" }}
+              About Lofty Mediquip
+            </h1>
+            <p
+              className="text-[16px] leading-relaxed mb-4"
+              style={{ color: "#555555" }}
             >
-              &ldquo;Empowering healthcare professionals with the tools they
-              need to save lives.&rdquo;
-            </blockquote>
-            <p className="text-[14px]" style={{ color: "#AEBDDB" }}>
-              — Lofty Mediquip Team
+              Lofty Mediquip is India&apos;s trusted online medical supply
+              store, dedicated to providing hospitals, clinics, and healthcare
+              professionals with the highest-quality medical equipment at
+              competitive prices.
+            </p>
+            <p
+              className="text-[16px] leading-relaxed"
+              style={{ color: "#555555" }}
+            >
+              Founded with a mission to make advanced medical technology
+              accessible across India, we partner with leading global and
+              domestic brands to bring you a comprehensive range of hospital
+              equipment, diagnostic devices, surgical supplies, and more.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Vision & Mission */}
-        <section className="w-full py-16">
-          <div className="max-w-[1440px] mx-auto px-[100px]">
-            <div className="grid grid-cols-2 gap-12">
+      {/* Core Values */}
+      <section className="w-full py-16">
+        <div className="max-w-[1440px] mx-auto px-[100px]">
+          <h2
+            className="text-[28px] font-bold text-center mb-12"
+            style={{ color: "#18315B" }}
+          >
+            Our Core Values
+          </h2>
+
+          <div className="grid grid-cols-4 gap-8">
+            {values.map((value) => (
               <div
-                className="relative p-8 rounded-[12px] overflow-hidden"
-                style={{ backgroundColor: "#ECF3FE" }}
+                key={value.title}
+                className="flex flex-col items-center text-center gap-4 p-6 rounded-[12px] border"
+                style={{ borderColor: "#E5EAF2", backgroundColor: "#FFFFFF" }}
               >
-                <span
-                  className="absolute top-4 right-6 text-[120px] font-black leading-none select-none pointer-events-none"
-                  style={{ color: "#3163B7", opacity: 0.08 }}
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: "#ECF3FE" }}
                 >
-                  V
-                </span>
+                  <ValueIcon name={value.icon} />
+                </div>
                 <h3
-                  className="text-[22px] font-bold mb-4 relative z-10"
+                  className="text-[18px] font-bold"
                   style={{ color: "#18315B" }}
                 >
-                  Our Vision
+                  {value.title}
                 </h3>
                 <p
-                  className="text-[15px] leading-relaxed relative z-10"
-                  style={{ color: "#555555" }}
+                  className="text-[13px] leading-relaxed"
+                  style={{ color: "#7D7D7D" }}
                 >
-                  To be India&apos;s most trusted and comprehensive medical
-                  equipment platform, enabling every healthcare facility — from
-                  large hospitals to rural clinics — to access world-class
-                  medical technology at affordable prices.
+                  {value.description}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <div
-                className="relative p-8 rounded-[12px] overflow-hidden"
-                style={{ backgroundColor: "#ECF3FE" }}
+      {/* Quote Banner */}
+      <section
+        className="w-full py-14"
+        style={{ backgroundColor: "#3163B7" }}
+      >
+        <div className="max-w-[1440px] mx-auto px-[100px] text-center">
+          <blockquote
+            className="text-[24px] font-semibold italic mb-4"
+            style={{ color: "#FFFFFF" }}
+          >
+            &ldquo;Empowering healthcare professionals with the tools they
+            need to save lives.&rdquo;
+          </blockquote>
+          <p className="text-[14px]" style={{ color: "#AEBDDB" }}>
+            — Lofty Mediquip Team
+          </p>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="w-full py-16">
+        <div className="max-w-[1440px] mx-auto px-[100px]">
+          <div className="grid grid-cols-2 gap-12">
+            <div
+              className="relative p-8 rounded-[12px] overflow-hidden"
+              style={{ backgroundColor: "#ECF3FE" }}
+            >
+              <span
+                className="absolute top-4 right-6 text-[120px] font-black leading-none select-none pointer-events-none"
+                style={{ color: "#3163B7", opacity: 0.08 }}
               >
-                <span
-                  className="absolute top-4 right-6 text-[120px] font-black leading-none select-none pointer-events-none"
-                  style={{ color: "#3163B7", opacity: 0.08 }}
-                >
-                  M
-                </span>
-                <h3
-                  className="text-[22px] font-bold mb-4 relative z-10"
-                  style={{ color: "#18315B" }}
-                >
-                  Our Mission
-                </h3>
-                <p
-                  className="text-[15px] leading-relaxed relative z-10"
-                  style={{ color: "#555555" }}
-                >
-                  To simplify the procurement of medical equipment by offering a
-                  transparent, reliable online marketplace with genuine
-                  products, competitive pricing, fast delivery, and exceptional
-                  customer support.
-                </p>
-              </div>
+                V
+              </span>
+              <h3
+                className="text-[22px] font-bold mb-4 relative z-10"
+                style={{ color: "#18315B" }}
+              >
+                Our Vision
+              </h3>
+              <p
+                className="text-[15px] leading-relaxed relative z-10"
+                style={{ color: "#555555" }}
+              >
+                To be India&apos;s most trusted and comprehensive medical
+                equipment platform, enabling every healthcare facility — from
+                large hospitals to rural clinics — to access world-class
+                medical technology at affordable prices.
+              </p>
+            </div>
+
+            <div
+              className="relative p-8 rounded-[12px] overflow-hidden"
+              style={{ backgroundColor: "#ECF3FE" }}
+            >
+              <span
+                className="absolute top-4 right-6 text-[120px] font-black leading-none select-none pointer-events-none"
+                style={{ color: "#3163B7", opacity: 0.08 }}
+              >
+                M
+              </span>
+              <h3
+                className="text-[22px] font-bold mb-4 relative z-10"
+                style={{ color: "#18315B" }}
+              >
+                Our Mission
+              </h3>
+              <p
+                className="text-[15px] leading-relaxed relative z-10"
+                style={{ color: "#555555" }}
+              >
+                To simplify the procurement of medical equipment by offering a
+                transparent, reliable online marketplace with genuine
+                products, competitive pricing, fast delivery, and exceptional
+                customer support.
+              </p>
             </div>
           </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+        </div>
+      </section>
+    </>
   );
 }
 

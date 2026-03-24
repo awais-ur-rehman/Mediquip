@@ -1,33 +1,24 @@
 "use client";
 
 interface SortBarProps {
-  total: number;
   sortBy: string;
   onSortChange: (value: string) => void;
 }
 
 const sortOptions = [
-  { value: "default", label: "Default" },
-  { value: "price-asc", label: "Price: Low to High" },
-  { value: "price-desc", label: "Price: High to Low" },
-  { value: "name-asc", label: "Name: A-Z" },
-  { value: "newest", label: "Newest First" },
+  { value: "featured", label: "Featured" },
+  { value: "price-low", label: "Price: Low to High" },
+  { value: "price-high", label: "Price: High to Low" },
+  { value: "name-az", label: "Name: A–Z" },
+  { value: "name-za", label: "Name: Z–A" },
 ];
 
-export default function SortBar({ total, sortBy, onSortChange }: SortBarProps) {
+export default function SortBar({ sortBy, onSortChange }: SortBarProps) {
   return (
     <div
-      className="flex items-center justify-between px-5 py-3 rounded-[8px] border"
+      className="flex items-center justify-end px-5 py-3 rounded-[8px] border"
       style={{ borderColor: "#E5EAF2", backgroundColor: "#FFFFFF" }}
     >
-      <p className="text-[13px]" style={{ color: "#7D7D7D" }}>
-        Showing{" "}
-        <span className="font-semibold" style={{ color: "#18315B" }}>
-          {total}
-        </span>{" "}
-        products
-      </p>
-
       <div className="flex items-center gap-3">
         <span className="text-[13px]" style={{ color: "#7D7D7D" }}>
           Sort by:

@@ -13,6 +13,7 @@ interface CategorySidebarProps {
   categories: Category[];
   selectedCategory?: string;
   selectedSubcategory?: string;
+  onFilterChange?: () => void;
 }
 
 export default function CategorySidebar({

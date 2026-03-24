@@ -599,5 +599,10 @@
         "12th pass or graduate"
       ]
     }
-  ]
+  ],
+  "settings": {
+    "currency": "INR",
+    "currencySymbol": "₹",
+    "currencyLocale": "en-IN"
+  }
 }

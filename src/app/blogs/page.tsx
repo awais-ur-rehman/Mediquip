@@ -1,8 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import Header from "@/components/layout/Header";
-import Menubar from "@/components/layout/Menubar";
-import Footer from "@/components/layout/Footer";
 import productsData from "@/data/products.json";
 
 export const metadata = {
@@ -13,115 +9,105 @@ export const metadata = {
 
 export default function BlogsPage() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <Menubar />
-      <div className="gradient-divider" />
+    <section className="w-full py-12">
+      <div className="max-w-[1440px] mx-auto px-[100px]">
+        {/* Header */}
+        <div className="mb-10">
+          <h1
+            className="text-[32px] font-bold mb-2"
+            style={{ color: "#18315B" }}
+          >
+            Blogs &amp; Articles
+          </h1>
+          <p className="text-[15px]" style={{ color: "#7D7D7D" }}>
+            Equipment guides, product reviews, and clinical tips from our
+            medical experts.
+          </p>
+        </div>
 
-      <main className="flex-1">
-        <section className="w-full py-12">
-          <div className="max-w-[1440px] mx-auto px-[100px]">
-            {/* Header */}
-            <div className="mb-10">
-              <h1
-                className="text-[32px] font-bold mb-2"
-                style={{ color: "#18315B" }}
+        {/* Blog Grid */}
+        <div className="grid grid-cols-3 gap-8">
+          {productsData.blogs.map((blog) => (
+            <article
+              key={blog.id}
+              className="rounded-[12px] border overflow-hidden transition-shadow hover:shadow-md"
+              style={{ borderColor: "#E5EAF2", backgroundColor: "#FFFFFF" }}
+            >
+              {/* Image */}
+              <div
+                className="relative w-full h-[200px] overflow-hidden"
+                style={{ backgroundColor: "#ECF3FE" }}
               >
-                Blogs & Articles
-              </h1>
-              <p className="text-[15px]" style={{ color: "#7D7D7D" }}>
-                Equipment guides, product reviews, and clinical tips from our
-                medical experts.
-              </p>
-            </div>
+                <Image
+                  src={blog.imageUrl}
+                  alt={blog.title}
+                  fill
+                  className="object-contain p-6"
+                  sizes="(max-width: 1440px) 33vw"
+                />
+              </div>
 
-            {/* Blog Grid */}
-            <div className="grid grid-cols-3 gap-8">
-              {productsData.blogs.map((blog) => (
-                <article
-                  key={blog.id}
-                  className="rounded-[12px] border overflow-hidden transition-shadow hover:shadow-md"
-                  style={{ borderColor: "#E5EAF2", backgroundColor: "#FFFFFF" }}
-                >
-                  {/* Image */}
-                  <div
-                    className="relative w-full h-[200px] overflow-hidden"
-                    style={{ backgroundColor: "#ECF3FE" }}
+              {/* Content */}
+              <div className="p-6">
+                {/* Category + Read Time */}
+                <div className="flex items-center gap-3 mb-3">
+                  <span
+                    className="text-[11px] font-bold uppercase px-2 py-0.5 rounded"
+                    style={{ backgroundColor: "#ECF3FE", color: "#3163B7" }}
                   >
-                    <Image
-                      src={blog.imageUrl}
-                      alt={blog.title}
-                      fill
-                      className="object-contain p-6"
-                      sizes="(max-width: 1440px) 33vw"
-                    />
-                  </div>
+                    {blog.category}
+                  </span>
+                  <span
+                    className="text-[11px]"
+                    style={{ color: "#7D7D7D" }}
+                  >
+                    {blog.readTime}
+                  </span>
+                </div>
 
-                  {/* Content */}
-                  <div className="p-6">
-                    {/* Category + Read Time */}
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-bold uppercase px-2 py-0.5 rounded"
-                        style={{ backgroundColor: "#ECF3FE", color: "#3163B7" }}
-                      >
-                        {blog.category}
-                      </span>
-                      <span
-                        className="text-[11px]"
-                        style={{ color: "#7D7D7D" }}
-                      >
-                        {blog.readTime}
-                      </span>
-                    </div>
+                {/* Title */}
+                <h2
+                  className="text-[16px] font-bold leading-snug mb-3"
+                  style={{ color: "#18315B" }}
+                >
+                  {blog.title}
+                </h2>
 
-                    {/* Title */}
-                    <h2
-                      className="text-[16px] font-bold leading-snug mb-3"
-                      style={{ color: "#18315B" }}
-                    >
-                      {blog.title}
-                    </h2>
+                {/* Excerpt */}
+                <p
+                  className="text-[13px] leading-relaxed mb-4 line-clamp-3"
+                  style={{ color: "#7D7D7D" }}
+                >
+                  {blog.excerpt}
+                </p>
 
-                    {/* Excerpt */}
-                    <p
-                      className="text-[13px] leading-relaxed mb-4 line-clamp-3"
-                      style={{ color: "#7D7D7D" }}
-                    >
-                      {blog.excerpt}
-                    </p>
-
-                    {/* Author + Date */}
-                    <div
-                      className="flex items-center justify-between pt-4 border-t"
-                      style={{ borderColor: "#EEF2F9" }}
-                    >
-                      <span
-                        className="text-[12px] font-semibold"
-                        style={{ color: "#555555" }}
-                      >
-                        {blog.author}
-                      </span>
-                      <span
-                        className="text-[12px]"
-                        style={{ color: "#7D7D7D" }}
-                      >
-                        {new Date(blog.date).toLocaleDateString("en-IN", {
-                          day: "numeric",
-                          month: "short",
-                          year: "numeric",
-                        })}
-                      </span>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+                {/* Author + Date */}
+                <div
+                  className="flex items-center justify-between pt-4 border-t"
+                  style={{ borderColor: "#EEF2F9" }}
+                >
+                  <span
+                    className="text-[12px] font-semibold"
+                    style={{ color: "#555555" }}
+                  >
+                    {blog.author}
+                  </span>
+                  <span
+                    className="text-[12px]"
+                    style={{ color: "#7D7D7D" }}
+                  >
+                    {new Date(blog.date).toLocaleDateString("en-IN", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
