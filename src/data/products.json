@@ -555,7 +555,7 @@
       "id": "sales-executive",
       "title": "Sales Executive - Medical Equipment",
       "department": "Sales",
-      "location": "Ahmedabad, Gujarat",
+      "location": "Islamabad",
       "type": "Full Time",
       "experience": "2-4 years",
       "description": "We are looking for an experienced Sales Executive to join our growing team. You will be responsible for building client relationships, achieving sales targets, and representing Lofty Mediquip in the market.",
@@ -571,7 +571,7 @@
       "id": "customer-support",
       "title": "Customer Support Specialist",
       "department": "Support",
-      "location": "Ahmedabad, Gujarat",
+      "location": "Islamabad",
       "type": "Full Time",
       "experience": "1-2 years",
       "description": "Join our customer support team to provide excellent service to healthcare professionals. You will handle inquiries, process orders, and ensure customer satisfaction.",
@@ -587,7 +587,7 @@
       "id": "logistics-coordinator",
       "title": "Logistics & Warehouse Coordinator",
       "department": "Operations",
-      "location": "Ahmedabad, Gujarat",
+      "location": "Islamabad",
       "type": "Full Time",
       "experience": "2-3 years",
       "description": "Manage the day-to-day logistics operations including inventory management, order processing, and coordinating with shipping partners.",
@@ -599,5 +599,10 @@
         "12th pass or graduate"
       ]
     }
-  ]
+  ],
+  "settings": {
+    "currency": "PKR",
+    "currencySymbol": "Rs.",
+    "currencyLocale": "en-PK"
+  }
 }

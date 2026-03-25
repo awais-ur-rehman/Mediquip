@@ -13,6 +13,7 @@ interface CategorySidebarProps {
   categories: Category[];
   selectedCategory?: string;
   selectedSubcategory?: string;
+  onFilterChange?: () => void;
 }
 
 export default function CategorySidebar({
@@ -26,7 +27,7 @@ export default function CategorySidebar({
 
   return (
     <aside
-      className="w-[220px] shrink-0 rounded-[10px] overflow-hidden border"
+      className="hidden lg:block w-[220px] shrink-0 rounded-[10px] overflow-hidden border"
       style={{ borderColor: "#E5EAF2", backgroundColor: "#FFFFFF" }}
     >
       {/* Header */}

@@ -1,313 +1,335 @@
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import Header from "@/components/layout/Header";
-import Menubar from "@/components/layout/Menubar";
-import Footer from "@/components/layout/Footer";
-import ProductCard from "@/components/ui/ProductCard";
 import productsData from "@/data/products.json";
 
-interface PageProps {
-  params: Promise<{ id: string }>;
-}
-
 export async function generateStaticParams() {
-  return productsData.products.map((p) => ({ id: p.id }));
+  return productsData.products.map((product) => ({ id: product.id }));
 }
 
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const product = productsData.products.find((p) => p.id === id);
   return {
     title: product
       ? `${product.shortName} - Lofty Mediquip`
       : "Product Not Found",
+    description: product
+      ? `Buy ${product.name} from Lofty Mediquip. ${product.features[0] || ""}`
+      : "Product not found",
   };
 }
 
-export default async function ProductDetailPage({ params }: PageProps) {
+export default async function ProductDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const product = productsData.products.find((p) => p.id === id);
 
-  if (!product) notFound();
+  if (!product) {
+    return (
+      <section className="w-full py-20 text-center">
+        <h1
+          className="text-[28px] font-bold mb-4"
+          style={{ color: "#18315B" }}
+        >
+          Product Not Found
+        </h1>
+        <Link
+          href="/products"
+          className="text-[14px] font-semibold hover:underline"
+          style={{ color: "#3163B7" }}
+        >
+          ← Back to Products
+        </Link>
+      </section>
+    );
+  }
 
-  const relatedProducts = productsData.products
-    .filter((p) => p.id !== product.id && p.category === product.category)
-    .slice(0, 4);
-
-  const formattedPrice = new Intl.NumberFormat("en-IN", {
+  const { currencyLocale, currency, currencySymbol } = productsData.settings;
+  const formattedPrice = new Intl.NumberFormat(currencyLocale, {
     style: "currency",
-    currency: "INR",
+    currency: currency,
+    minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(product.price);
 
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <Menubar />
-      <div className="gradient-divider" />
+  // Related products from same category
+  const relatedProducts = productsData.products
+    .filter((p) => p.category === product.category && p.id !== product.id)
+    .slice(0, 3);
 
-      <main className="flex-1">
-        <section className="w-full py-10">
-          <div className="max-w-[1440px] mx-auto px-[100px]">
-            {/* Breadcrumb */}
-            <nav
-              className="text-[12px] mb-8 flex items-center gap-2"
+  return (
+    <>
+      {/* Breadcrumb */}
+      <div className="w-full py-3" style={{ backgroundColor: "#F8FAFF" }}>
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
+          <div className="flex items-center gap-2 text-[12px]">
+            <Link
+              href="/"
+              className="hover:underline"
               style={{ color: "#7D7D7D" }}
             >
-              <Link href="/" className="hover:text-blue-500">
-                Home
-              </Link>
-              <span>›</span>
-              <Link href="/products" className="hover:text-blue-500">
-                Hospital Equipment
-              </Link>
-              <span>›</span>
-              <span style={{ color: "#3163B7" }}>{product.shortName}</span>
-            </nav>
+              Home
+            </Link>
+            <span style={{ color: "#7D7D7D" }}>/</span>
+            <Link
+              href="/products"
+              className="hover:underline"
+              style={{ color: "#7D7D7D" }}
+            >
+              Products
+            </Link>
+            <span style={{ color: "#7D7D7D" }}>/</span>
+            <span style={{ color: "#18315B" }} className="font-semibold">
+              {product.shortName}
+            </span>
+          </div>
+        </div>
+      </div>
 
-            {/* Product Detail */}
-            <div className="flex gap-12">
-              {/* Left: Images */}
-              <div className="flex flex-col gap-4 w-[420px] shrink-0">
-                {/* Main Image */}
-                <div
-                  className="relative w-full aspect-square rounded-[12px] overflow-hidden border"
-                  style={{ borderColor: "#E5EAF2", backgroundColor: "#ECF3FE" }}
-                >
+      {/* Product Detail */}
+      <section className="w-full py-10">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Images */}
+            <div>
+              <div
+                className="rounded-[12px] overflow-hidden border"
+                style={{
+                  borderColor: "#E5EAF2",
+                  backgroundColor: "#ECF3FE",
+                }}
+              >
+                <div className="relative w-full h-[280px] sm:h-[350px] lg:h-[400px]">
                   <Image
-                    src={product.imageUrl}
+                    src={product.images[0]}
                     alt={product.name}
                     fill
                     className="object-contain p-8"
+                    sizes="600px"
                     priority
-                    sizes="420px"
                   />
                 </div>
-
-                {/* Thumbnails */}
-                {product.images.length > 1 && (
-                  <div className="flex gap-3">
-                    {product.images.map((img, i) => (
-                      <div
-                        key={i}
-                        className="relative w-[80px] h-[80px] rounded-[8px] overflow-hidden border-2"
-                        style={{
-                          borderColor: i === 0 ? "#3163B7" : "#E5EAF2",
-                          backgroundColor: "#ECF3FE",
-                        }}
-                      >
-                        <Image
-                          src={img}
-                          alt={`${product.shortName} view ${i + 1}`}
-                          fill
-                          className="object-contain p-2"
-                          sizes="80px"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
 
-              {/* Right: Info */}
-              <div className="flex-1">
-                {/* Brand */}
-                <p
-                  className="text-[13px] font-semibold uppercase tracking-wide mb-2"
-                  style={{ color: "#7D7D7D" }}
-                >
-                  {product.brand}
-                </p>
-
-                {/* Name */}
-                <h1
-                  className="text-[22px] font-bold leading-snug mb-3"
-                  style={{ color: "#18315B" }}
-                >
-                  {product.name}
-                </h1>
-
-                {/* Meta */}
-                <div className="flex items-center gap-4 mb-5 text-[13px]">
-                  <span style={{ color: "#7D7D7D" }}>
-                    Product ID:{" "}
-                    <span style={{ color: "#555555" }}>
-                      {product.productId}
-                    </span>
-                  </span>
-                  <span
-                    className="px-2 py-0.5 rounded text-[12px] font-semibold"
-                    style={{
-                      backgroundColor:
-                        product.availability === "In Stock"
-                          ? "#E8F7EF"
-                          : "#FEE8EC",
-                      color:
-                        product.availability === "In Stock"
-                          ? "#098B48"
-                          : "#D92550",
-                    }}
-                  >
-                    {product.availability}
-                  </span>
-                </div>
-
-                {/* Price */}
-                <div className="mb-6">
-                  <span
-                    className="text-[32px] font-bold"
-                    style={{ color: "#3163B7" }}
-                  >
-                    {formattedPrice}
-                  </span>
-                  <p className="text-[12px] mt-1" style={{ color: "#7D7D7D" }}>
-                    Inclusive of all taxes
-                  </p>
-                </div>
-
-                {/* Type */}
-                {product.type && (
-                  <div className="mb-5">
-                    <p
-                      className="text-[13px] font-semibold mb-2"
-                      style={{ color: "#18315B" }}
+              {product.images.length > 1 && (
+                <div className="grid grid-cols-4 gap-3 mt-4">
+                  {product.images.map((img, i) => (
+                    <div
+                      key={i}
+                      className="rounded-[8px] overflow-hidden border cursor-pointer"
+                      style={{
+                        borderColor: i === 0 ? "#3163B7" : "#E5EAF2",
+                        backgroundColor: "#ECF3FE",
+                      }}
                     >
-                      Type
-                    </p>
-                    <span
-                      className="inline-block px-4 py-1.5 rounded-full border text-[13px]"
-                      style={{ borderColor: "#3163B7", color: "#3163B7" }}
-                    >
-                      {product.type}
-                    </span>
-                  </div>
-                )}
-
-                {/* Inquiry Button */}
-                <button
-                  className="w-full py-3 rounded-[8px] text-[15px] font-bold transition-colors hover:opacity-90 mb-6"
-                  style={{ backgroundColor: "#3163B7", color: "#FFFFFF" }}
-                >
-                  Inquiry Now
-                </button>
-
-                {/* Features */}
-                <div
-                  className="rounded-[10px] p-5 mb-6"
-                  style={{ backgroundColor: "#ECF3FE" }}
-                >
-                  <h3
-                    className="text-[15px] font-bold mb-3"
-                    style={{ color: "#18315B" }}
-                  >
-                    Key Features
-                  </h3>
-                  <ul className="flex flex-col gap-2">
-                    {product.features.map((feature, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-[13px]"
-                        style={{ color: "#555555" }}
-                      >
-                        <svg
-                          className="mt-0.5 shrink-0"
-                          width="14"
-                          height="14"
-                          viewBox="0 0 14 14"
-                          fill="none"
-                        >
-                          <circle cx="7" cy="7" r="7" fill="#3163B7" />
-                          <path
-                            d="M4 7l2 2 4-4"
-                            stroke="white"
-                            strokeWidth="1.3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Policies */}
-                <div className="flex flex-col gap-4">
-                  {[
-                    {
-                      label: "Shipping Policy",
-                      content: product.shippingPolicy,
-                    },
-                    { label: "Refund Policy", content: product.refundPolicy },
-                    {
-                      label: "Cancellation Policy",
-                      content: product.cancellationPolicy,
-                    },
-                  ].map(({ label, content }) => (
-                    <details
-                      key={label}
-                      className="rounded-[8px] border overflow-hidden"
-                      style={{ borderColor: "#E5EAF2" }}
-                    >
-                      <summary
-                        className="px-4 py-3 text-[13px] font-semibold cursor-pointer select-none list-none flex items-center justify-between"
-                        style={{ color: "#18315B" }}
-                      >
-                        {label}
-                        <svg
-                          width="14"
-                          height="14"
-                          viewBox="0 0 14 14"
-                          fill="none"
-                        >
-                          <path
-                            d="M3 5L7 9L11 5"
-                            stroke="#7D7D7D"
-                            strokeWidth="1.4"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </summary>
-                      <p
-                        className="px-4 pb-4 text-[12px] leading-relaxed"
-                        style={{ color: "#555555" }}
-                      >
-                        {content}
-                      </p>
-                    </details>
+                      <div className="relative w-full h-[80px]">
+                        <Image
+                          src={img}
+                          alt={`${product.name} view ${i + 1}`}
+                          fill
+                          className="object-contain p-2"
+                          sizes="100px"
+                        />
+                      </div>
+                    </div>
                   ))}
                 </div>
+              )}
+            </div>
+
+            {/* Info */}
+            <div>
+              <span
+                className="text-[12px] font-bold uppercase tracking-wider"
+                style={{ color: "#3163B7" }}
+              >
+                {product.brand}
+              </span>
+              <h1
+                className="text-[24px] font-bold mt-1 mb-6 leading-snug"
+                style={{ color: "#18315B" }}
+              >
+                {product.name}
+              </h1>
+
+              {/* Price + Availability */}
+              <div className="flex items-center gap-4 mb-6">
+                <span
+                  className="text-[30px] font-bold"
+                  style={{ color: "#3163B7" }}
+                >
+                  {currencySymbol}
+                  {formattedPrice.replace(/[^\d,.\s]/g, "")}
+                </span>
+                <span
+                  className="text-[13px] font-bold px-3 py-1 rounded-[4px]"
+                  style={{
+                    backgroundColor:
+                      product.availability === "In Stock"
+                        ? "#E8F7EF"
+                        : "#FDEBEF",
+                    color:
+                      product.availability === "In Stock"
+                        ? "#098B48"
+                        : "#D92550",
+                  }}
+                >
+                  {product.availability}
+                </span>
+              </div>
+
+              {/* Meta */}
+              <div className="flex flex-col gap-2 mb-6">
+                <div className="flex gap-2 text-[13px]">
+                  <span style={{ color: "#7D7D7D" }}>Product ID:</span>
+                  <span
+                    className="font-semibold"
+                    style={{ color: "#18315B" }}
+                  >
+                    {product.productId}
+                  </span>
+                </div>
+                <div className="flex gap-2 text-[13px]">
+                  <span style={{ color: "#7D7D7D" }}>Category:</span>
+                  <span
+                    className="font-semibold"
+                    style={{ color: "#18315B" }}
+                  >
+                    {product.category}
+                  </span>
+                </div>
+              </div>
+
+              {/* Inquiry CTA */}
+              <button
+                className="w-full py-3.5 rounded-[8px] text-[15px] font-bold transition-opacity hover:opacity-90 mb-8"
+                style={{ backgroundColor: "#3163B7", color: "#FFFFFF" }}
+              >
+                Inquire Now
+              </button>
+
+              {/* Features */}
+              <div className="mb-6">
+                <h3
+                  className="text-[16px] font-bold mb-3"
+                  style={{ color: "#18315B" }}
+                >
+                  Key Features
+                </h3>
+                <ul className="flex flex-col gap-2">
+                  {product.features.map((f, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-2.5 text-[13px]"
+                      style={{ color: "#555555" }}
+                    >
+                      <svg
+                        className="mt-0.5 shrink-0"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <circle cx="7" cy="7" r="7" fill="#ECF3FE" />
+                        <path
+                          d="M4 7l2 2 4-4"
+                          stroke="#3163B7"
+                          strokeWidth="1.3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Recently Added */}
-        {relatedProducts.length > 0 && (
-          <section
-            className="w-full py-10"
-            style={{ backgroundColor: "#F8FAFF" }}
-          >
-            <div className="max-w-[1440px] mx-auto px-[100px]">
+      {/* Related Products */}
+      {relatedProducts.length > 0 && (
+        <section className="w-full py-10">
+          <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
+            <div
+              className="pt-10"
+              style={{ borderTop: "1px solid #EEF2F9" }}
+            >
               <h2
                 className="text-[22px] font-bold mb-6"
                 style={{ color: "#18315B" }}
               >
-                Recently Added
+                Related Products
               </h2>
-              <div className="grid grid-cols-4 gap-5">
-                {relatedProducts.map((p) => (
-                  <ProductCard key={p.id} product={p} />
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {relatedProducts.map((rp) => {
+                  const rpPrice = new Intl.NumberFormat(currencyLocale, {
+                    style: "currency",
+                    currency,
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0,
+                  }).format(rp.price);
+
+                  return (
+                    <Link
+                      key={rp.id}
+                      href={`/product/${rp.id}`}
+                      className="group flex flex-col rounded-[10px] border overflow-hidden transition-shadow hover:shadow-lg"
+                      style={{
+                        borderColor: "#E5EAF2",
+                        backgroundColor: "#FFFFFF",
+                      }}
+                    >
+                      <div
+                        className="relative w-full h-[200px] overflow-hidden"
+                        style={{ backgroundColor: "#ECF3FE" }}
+                      >
+                        <Image
+                          src={rp.imageUrl}
+                          alt={rp.shortName}
+                          fill
+                          className="object-contain p-6 transition-transform duration-300 group-hover:scale-105"
+                          sizes="33vw"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <span
+                          className="text-[11px] font-bold uppercase tracking-wide"
+                          style={{ color: "#7D7D7D" }}
+                        >
+                          {rp.brand}
+                        </span>
+                        <h3
+                          className="text-[14px] font-bold leading-snug"
+                          style={{ color: "#18315B" }}
+                        >
+                          {rp.shortName}
+                        </h3>
+                        <span
+                          className="text-[16px] font-bold"
+                          style={{ color: "#3163B7" }}
+                        >
+                          {currencySymbol}
+                          {rpPrice.replace(/[^\d,.\s]/g, "")}
+                        </span>
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
-          </section>
-        )}
-      </main>
-
-      <Footer />
-    </div>
+          </div>
+        </section>
+      )}
+    </>
   );
 }
