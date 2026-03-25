@@ -10,11 +10,11 @@ export const metadata = {
 export default function BlogsPage() {
   return (
     <section className="w-full py-12">
-      <div className="max-w-[1440px] mx-auto px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
         {/* Header */}
         <div className="mb-10">
           <h1
-            className="text-[32px] font-bold mb-2"
+            className="text-[26px] sm:text-[30px] lg:text-[32px] font-bold mb-2"
             style={{ color: "#18315B" }}
           >
             Blogs &amp; Articles
@@ -26,7 +26,7 @@ export default function BlogsPage() {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {productsData.blogs.map((blog) => (
             <article
               key={blog.id}

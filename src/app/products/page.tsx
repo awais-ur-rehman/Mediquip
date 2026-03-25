@@ -82,7 +82,7 @@ export default function ProductsPage() {
 
   return (
     <section className="w-full py-10 min-h-screen">
-      <div className="max-w-[1440px] mx-auto px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
         <div className="flex gap-8">
           {/* Sidebar */}
           <CategorySidebar
@@ -93,7 +93,7 @@ export default function ProductsPage() {
           {/* Main Content */}
           <div className="flex-1">
             {/* Breadcrumb */}
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-6">
               <h1
                 className="text-[26px] font-bold"
                 style={{ color: "#18315B" }}
@@ -114,7 +114,7 @@ export default function ProductsPage() {
 
             {/* Products Grid */}
             {paginatedProducts.length > 0 ? (
-              <div className="grid grid-cols-3 gap-6 mt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-6">
                 {paginatedProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}

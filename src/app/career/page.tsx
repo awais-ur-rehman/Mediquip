@@ -14,9 +14,9 @@ export default function CareerPage() {
         className="w-full py-16"
         style={{ backgroundColor: "#ECF3FE" }}
       >
-        <div className="max-w-[1440px] mx-auto px-[100px]">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
           <h1
-            className="text-[36px] font-bold mb-4"
+            className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold mb-4"
             style={{ color: "#18315B" }}
           >
             Join Our Team
@@ -34,7 +34,7 @@ export default function CareerPage() {
 
       {/* Job Listings */}
       <section className="w-full py-12">
-        <div className="max-w-[1440px] mx-auto px-[100px]">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
           <h2
             className="text-[24px] font-bold mb-8"
             style={{ color: "#18315B" }}
@@ -49,7 +49,7 @@ export default function CareerPage() {
                 className="rounded-[12px] border p-6 transition-shadow hover:shadow-md"
                 style={{ borderColor: "#E5EAF2", backgroundColor: "#FFFFFF" }}
               >
-                <div className="flex items-start justify-between mb-4">
+                <div className="flex flex-col sm:flex-row items-start justify-between gap-4 mb-4">
                   <div>
                     <h3
                       className="text-[18px] font-bold mb-2"

@@ -13,7 +13,7 @@ interface BrandsCarouselProps {
 export default function BrandsCarousel({ brands }: BrandsCarouselProps) {
   return (
     <section className="w-full py-12" style={{ backgroundColor: "#FFFFFF" }}>
-      <div className="max-w-[1440px] mx-auto px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
         <h2
           className="text-[24px] font-bold mb-8 text-center"
           style={{ color: "#18315B" }}

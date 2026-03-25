@@ -41,10 +41,10 @@ export default function AboutPage() {
         className="w-full py-16"
         style={{ backgroundColor: "#ECF3FE" }}
       >
-        <div className="max-w-[1440px] mx-auto px-[100px]">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
           <div className="max-w-[700px]">
             <h1
-              className="text-[42px] font-bold leading-tight mb-6"
+              className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold leading-tight mb-6"
               style={{ color: "#18315B" }}
             >
               About Lofty Mediquip
@@ -73,7 +73,7 @@ export default function AboutPage() {
 
       {/* Core Values */}
       <section className="w-full py-16">
-        <div className="max-w-[1440px] mx-auto px-[100px]">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
           <h2
             className="text-[28px] font-bold text-center mb-12"
             style={{ color: "#18315B" }}
@@ -81,7 +81,7 @@ export default function AboutPage() {
             Our Core Values
           </h2>
 
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {values.map((value) => (
               <div
                 key={value.title}
@@ -117,9 +117,9 @@ export default function AboutPage() {
         className="w-full py-14"
         style={{ backgroundColor: "#3163B7" }}
       >
-        <div className="max-w-[1440px] mx-auto px-[100px] text-center">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px] text-center">
           <blockquote
-            className="text-[24px] font-semibold italic mb-4"
+            className="text-[18px] sm:text-[22px] lg:text-[24px] font-semibold italic mb-4"
             style={{ color: "#FFFFFF" }}
           >
             &ldquo;Empowering healthcare professionals with the tools they
@@ -133,8 +133,8 @@ export default function AboutPage() {
 
       {/* Vision & Mission */}
       <section className="w-full py-16">
-        <div className="max-w-[1440px] mx-auto px-[100px]">
-          <div className="grid grid-cols-2 gap-12">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             <div
               className="relative p-8 rounded-[12px] overflow-hidden"
               style={{ backgroundColor: "#ECF3FE" }}

@@ -26,8 +26,8 @@ export default function Footer() {
     <footer>
       {/* Main Footer */}
       <div className="w-full" style={{ backgroundColor: "#18315B" }}>
-        <div className="max-w-[1440px] mx-auto px-[100px] py-14">
-          <div className="grid grid-cols-4 gap-12">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px] py-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
             {/* Brand Column */}
             <div className="flex flex-col gap-5">
               <div className="flex items-center gap-2">
@@ -164,7 +164,7 @@ export default function Footer() {
 
       {/* Copyright Bar */}
       <div className="w-full py-4" style={{ backgroundColor: "#0F2240" }}>
-        <div className="max-w-[1440px] mx-auto px-[100px] flex items-center justify-between">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px] flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[12px]" style={{ color: "#7A90B2" }}>
             © {new Date().getFullYear()} Lofty Mediquip. All rights reserved.
           </p>

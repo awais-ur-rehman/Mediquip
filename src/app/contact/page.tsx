@@ -27,11 +27,11 @@ export default function ContactPage() {
 
   return (
     <section className="w-full py-12">
-      <div className="max-w-[1440px] mx-auto px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
         {/* Header */}
         <div className="mb-10">
           <h1
-            className="text-[32px] font-bold mb-2"
+            className="text-[26px] sm:text-[30px] lg:text-[32px] font-bold mb-2"
             style={{ color: "#18315B" }}
           >
             Contact Us
@@ -42,7 +42,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
           {/* Contact Form */}
           <div>
             {submitted ? (
@@ -79,7 +79,7 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label
                       className="block text-[13px] font-semibold mb-1.5"

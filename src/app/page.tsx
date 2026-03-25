@@ -110,7 +110,7 @@ export default function HomePage() {
         }}
       >
         <motion.div
-          className="max-w-[1440px] mx-auto px-[100px] w-full flex items-center gap-16 relative z-10"
+          className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px] w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16 relative z-10"
           style={{ y: heroY, opacity: heroOpacity }}
         >
           {/* Text Side */}
@@ -140,7 +140,7 @@ export default function HomePage() {
               </span>
             </motion.div>
 
-            <h1 className="text-[52px] font-bold leading-[1.1] mb-6 text-white">
+            <h1 className="text-[32px] sm:text-[40px] lg:text-[48px] xl:text-[52px] font-bold leading-[1.1] mb-6 text-white">
               Premium Hospital
               <br />
               <span
@@ -157,7 +157,7 @@ export default function HomePage() {
             </h1>
 
             <p
-              className="text-[17px] leading-relaxed mb-10 max-w-[520px]"
+              className="text-[15px] sm:text-[16px] lg:text-[17px] leading-relaxed mb-8 lg:mb-10 max-w-[520px]"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
               Your one-stop destination for certified medical devices,
@@ -165,7 +165,7 @@ export default function HomePage() {
               furniture from Pakistan&apos;s most trusted manufacturers.
             </p>
 
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <Link
                 href="/products"
                 className="group relative px-8 py-4 rounded-[10px] text-[14px] font-bold overflow-hidden transition-transform hover:scale-[1.03]"
@@ -195,7 +195,7 @@ export default function HomePage() {
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           >
-            <div className="relative h-[480px] rounded-[20px] overflow-hidden">
+            <div className="relative h-[300px] sm:h-[380px] lg:h-[480px] rounded-[20px] overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop"
                 alt="Modern hospital equipment"
@@ -215,7 +215,7 @@ export default function HomePage() {
 
             {/* Floating stat card */}
             <motion.div
-              className="absolute -bottom-6 -left-8 p-5 rounded-[14px]"
+              className="absolute -bottom-6 -left-4 sm:-left-8 p-4 sm:p-5 rounded-[14px] hidden sm:block"
               style={{
                 background: "rgba(255,255,255,0.1)",
                 backdropFilter: "blur(20px)",
@@ -284,9 +284,9 @@ export default function HomePage() {
           STATS BAR
       ═══════════════════════════════════════════ */}
       <section className="w-full py-0 relative z-10" style={{ marginTop: "-60px" }}>
-        <div className="max-w-[1200px] mx-auto px-[100px]">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
           <motion.div
-            className="grid grid-cols-4 rounded-[16px] overflow-hidden"
+            className="grid grid-cols-2 sm:grid-cols-4 rounded-[16px] overflow-hidden"
             style={{
               background: "rgba(255,255,255,0.95)",
               backdropFilter: "blur(20px)",
@@ -308,7 +308,7 @@ export default function HomePage() {
           WHY CHOOSE US — Full Viewport
       ═══════════════════════════════════════════ */}
       <section className="w-full min-h-screen flex items-center py-24" style={{ backgroundColor: "#FFFFFF" }}>
-        <div className="max-w-[1440px] mx-auto px-[100px] w-full">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px] w-full">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -322,7 +322,7 @@ export default function HomePage() {
             >
               Why Choose Us
             </span>
-            <h2 className="text-[36px] font-bold mb-3" style={{ color: "#18315B" }}>
+            <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold mb-3" style={{ color: "#18315B" }}>
               Built on Trust, Driven by Quality
             </h2>
             <p className="text-[15px] max-w-[500px] mx-auto" style={{ color: "#7D7D7D" }}>
@@ -331,7 +331,7 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6"
             variants={stagger}
             initial="hidden"
             whileInView="visible"
@@ -379,7 +379,7 @@ export default function HomePage() {
           BROWSE CATEGORIES — Full Viewport
       ═══════════════════════════════════════════ */}
       <section className="w-full min-h-screen flex items-center py-24" style={{ backgroundColor: "#F4F7FC" }}>
-        <div className="max-w-[1440px] mx-auto px-[100px] w-full">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px] w-full">
           <motion.div
             className="text-center mb-14"
             initial={{ opacity: 0, y: 30 }}
@@ -393,7 +393,7 @@ export default function HomePage() {
             >
               Categories
             </span>
-            <h2 className="text-[36px] font-bold mb-3" style={{ color: "#18315B" }}>
+            <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold mb-3" style={{ color: "#18315B" }}>
               Browse by Category
             </h2>
             <p className="text-[15px] max-w-[500px] mx-auto" style={{ color: "#7D7D7D" }}>
@@ -402,7 +402,7 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-5 gap-5"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5"
             variants={stagger}
             initial="hidden"
             whileInView="visible"
@@ -450,9 +450,9 @@ export default function HomePage() {
           FEATURED PRODUCTS — Full Viewport
       ═══════════════════════════════════════════ */}
       <section className="w-full min-h-screen flex items-center py-24" style={{ backgroundColor: "#FFFFFF" }}>
-        <div className="max-w-[1440px] mx-auto px-[100px] w-full">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px] w-full">
           <motion.div
-            className="flex items-end justify-between mb-10"
+            className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -465,7 +465,7 @@ export default function HomePage() {
               >
                 Featured
               </span>
-              <h2 className="text-[36px] font-bold mb-2" style={{ color: "#18315B" }}>
+              <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold mb-2" style={{ color: "#18315B" }}>
                 Popular Equipment
               </h2>
               <p className="text-[15px]" style={{ color: "#7D7D7D" }}>
@@ -485,7 +485,7 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
             variants={stagger}
             initial="hidden"
             whileInView="visible"
@@ -504,7 +504,7 @@ export default function HomePage() {
           BRANDS — Infinite Marquee
       ═══════════════════════════════════════════ */}
       <section className="w-full py-20 overflow-hidden" style={{ backgroundColor: "#F4F7FC" }}>
-        <div className="max-w-[1440px] mx-auto px-[100px]">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -512,7 +512,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-[28px] font-bold mb-2" style={{ color: "#18315B" }}>
+            <h2 className="text-[22px] sm:text-[26px] lg:text-[28px] font-bold mb-2" style={{ color: "#18315B" }}>
               Trusted by Leading Manufacturers
             </h2>
             <p className="text-[14px]" style={{ color: "#7D7D7D" }}>
@@ -556,7 +556,7 @@ export default function HomePage() {
             "linear-gradient(145deg, #050D1F 0%, #0D2A5C 40%, #1B4298 100%)",
         }}
       >
-        <div className="max-w-[1440px] mx-auto px-[100px] w-full relative z-10">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px] w-full relative z-10">
           <motion.div
             className="text-center max-w-[700px] mx-auto"
             initial={{ opacity: 0, y: 30 }}
@@ -579,7 +579,7 @@ export default function HomePage() {
               </span>
             </span>
 
-            <h2 className="text-[40px] font-bold text-white mb-5 leading-tight">
+            <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold text-white mb-5 leading-tight">
               Need Help Choosing the
               <br />
               <span
@@ -601,7 +601,7 @@ export default function HomePage() {
               practices.
             </p>
 
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <Link
                 href="/contact"
                 className="px-8 py-4 rounded-[10px] text-[14px] font-bold transition-transform hover:scale-[1.03]"

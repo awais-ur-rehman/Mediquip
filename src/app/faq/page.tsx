@@ -9,11 +9,11 @@ export default function FAQPage() {
 
   return (
     <section className="w-full py-12">
-      <div className="max-w-[1440px] mx-auto px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
         {/* Header */}
         <div className="text-center mb-12">
           <h1
-            className="text-[36px] font-bold mb-3"
+            className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold mb-3"
             style={{ color: "#18315B" }}
           >
             Frequently Asked Questions

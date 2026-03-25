@@ -68,7 +68,7 @@ export default async function ProductDetailPage({
     <>
       {/* Breadcrumb */}
       <div className="w-full py-3" style={{ backgroundColor: "#F8FAFF" }}>
-        <div className="max-w-[1440px] mx-auto px-[100px]">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
           <div className="flex items-center gap-2 text-[12px]">
             <Link
               href="/"
@@ -95,8 +95,8 @@ export default async function ProductDetailPage({
 
       {/* Product Detail */}
       <section className="w-full py-10">
-        <div className="max-w-[1440px] mx-auto px-[100px]">
-          <div className="grid grid-cols-2 gap-12">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {/* Images */}
             <div>
               <div
@@ -106,7 +106,7 @@ export default async function ProductDetailPage({
                   backgroundColor: "#ECF3FE",
                 }}
               >
-                <div className="relative w-full h-[400px]">
+                <div className="relative w-full h-[280px] sm:h-[350px] lg:h-[400px]">
                   <Image
                     src={product.images[0]}
                     alt={product.name}
@@ -259,7 +259,7 @@ export default async function ProductDetailPage({
       {/* Related Products */}
       {relatedProducts.length > 0 && (
         <section className="w-full py-10">
-          <div className="max-w-[1440px] mx-auto px-[100px]">
+          <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[60px] xl:px-[100px]">
             <div
               className="pt-10"
               style={{ borderTop: "1px solid #EEF2F9" }}
@@ -270,7 +270,7 @@ export default async function ProductDetailPage({
               >
                 Related Products
               </h2>
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {relatedProducts.map((rp) => {
                   const rpPrice = new Intl.NumberFormat(currencyLocale, {
                     style: "currency",
