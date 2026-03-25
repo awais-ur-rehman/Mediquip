@@ -96,7 +96,7 @@ export default function BlogsPage() {
                     className="text-[12px]"
                     style={{ color: "#7D7D7D" }}
                   >
-                    {new Date(blog.date).toLocaleDateString("en-IN", {
+                    {new Date(blog.date).toLocaleDateString("en-PK", {
                       day: "numeric",
                       month: "short",
                       year: "numeric",

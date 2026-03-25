@@ -110,7 +110,7 @@ export default function ContactPage() {
                       name="phone"
                       value={form.phone}
                       onChange={handleChange}
-                      placeholder="+91 98765 43210"
+                      placeholder="+92 300 1234567"
                       className="w-full px-4 py-2.5 rounded-[8px] border text-[13px] outline-none"
                       style={{ borderColor: "#E5EAF2", color: "#222222" }}
                     />
@@ -207,8 +207,8 @@ export default function ContactPage() {
                   {
                     icon: "phone",
                     label: "Phone",
-                    value: "+91 98765 43210",
-                    sub: "Mon–Sat, 9am–6pm IST",
+                    value: "+92 333 6835815",
+                    sub: "Mon–Sat, 9am–6pm PKT",
                   },
                   {
                     icon: "email",
@@ -219,7 +219,7 @@ export default function ContactPage() {
                   {
                     icon: "location",
                     label: "Address",
-                    value: "Ahmedabad, Gujarat, India",
+                    value: "Islamabad, Pakistan",
                     sub: "Visit us by appointment",
                   },
                 ].map((item) => (

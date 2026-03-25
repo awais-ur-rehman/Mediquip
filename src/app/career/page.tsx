@@ -26,7 +26,7 @@ export default function CareerPage() {
             style={{ color: "#555555" }}
           >
             Be part of a mission-driven team committed to transforming
-            healthcare access in India. We&apos;re looking for passionate
+            healthcare access in Pakistan. We&apos;re looking for passionate
             individuals who want to make a difference.
           </p>
         </div>

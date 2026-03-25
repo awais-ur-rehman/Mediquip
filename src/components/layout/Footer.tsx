@@ -15,9 +15,9 @@ const footerLinks = {
     { label: "Brands", href: "/products?category=brands" },
   ],
   contact: [
-    { icon: "phone", text: "+91 98765 43210" },
+    { icon: "phone", text: "+92 333 6835815" },
     { icon: "email", text: "info@loftymediquip.com" },
-    { icon: "location", text: "Ahmedabad, Gujarat, India" },
+    { icon: "location", text: "Islamabad, Pakistan" },
   ],
 };
 
@@ -66,7 +66,7 @@ export default function Footer() {
                 className="text-[13px] leading-relaxed"
                 style={{ color: "#AEBDDB" }}
               >
-                India&apos;s trusted online medical supply store. Quality
+                Pakistan&apos;s trusted online medical supply store. Quality
                 hospital equipment, diagnostic devices and surgical supplies
                 delivered to your doorstep.
               </p>

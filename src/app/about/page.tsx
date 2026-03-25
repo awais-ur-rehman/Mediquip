@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us - Lofty Mediquip",
   description:
-    "Learn about Lofty Mediquip — India's trusted medical supply store committed to quality, safety, and performance.",
+    "Learn about Lofty Mediquip — Pakistan's trusted medical supply store committed to quality, safety, and performance.",
 };
 
 const values = [
@@ -53,7 +53,7 @@ export default function AboutPage() {
               className="text-[16px] leading-relaxed mb-4"
               style={{ color: "#555555" }}
             >
-              Lofty Mediquip is India&apos;s trusted online medical supply
+              Lofty Mediquip is Pakistan&apos;s trusted online medical supply
               store, dedicated to providing hospitals, clinics, and healthcare
               professionals with the highest-quality medical equipment at
               competitive prices.
@@ -63,7 +63,7 @@ export default function AboutPage() {
               style={{ color: "#555555" }}
             >
               Founded with a mission to make advanced medical technology
-              accessible across India, we partner with leading global and
+              accessible across Pakistan, we partner with leading global and
               domestic brands to bring you a comprehensive range of hospital
               equipment, diagnostic devices, surgical supplies, and more.
             </p>
@@ -155,7 +155,7 @@ export default function AboutPage() {
                 className="text-[15px] leading-relaxed relative z-10"
                 style={{ color: "#555555" }}
               >
-                To be India&apos;s most trusted and comprehensive medical
+                To be Pakistan&apos;s most trusted and comprehensive medical
                 equipment platform, enabling every healthcare facility — from
                 large hospitals to rural clinics — to access world-class
                 medical technology at affordable prices.
